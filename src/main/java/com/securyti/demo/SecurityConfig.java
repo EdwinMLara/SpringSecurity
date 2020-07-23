@@ -36,6 +36,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailService).passwordEncoder(bcrytp);
     }
-
     
 }
