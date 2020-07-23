@@ -35,7 +35,7 @@ public class jwtDemo {
         final byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(SECRET_KEY);
         final Key signedKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
 
-        final JwtBuilder jwt = Jwts.builder().setClaims(claims).setIssuedAt(now).setSubject(subject).setIssuer(issuer)
+        final JwtBuilder jwt = Jwts.builder().setClaims(claims).setIssuedAt(now).setSubject(subject)
                 .signWith(signatureAlgorithm, signedKey);
 
         if (ttMillis > 0) {
