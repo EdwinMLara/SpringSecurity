@@ -15,7 +15,10 @@ import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
+
+@Service
 public class jwtDemo {
     public final static String SECRET_KEY = "secret";
 
